@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Andada+Pro:wght@800&family=Archivo:wght@500&family=Open+Sans:wght@700&family=Roboto:wght@700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../img/back.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 0 18vw;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3.12rem 0;
+}
+
+header .social-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+header .social-container .icon {
+  width: fit-content;
+  height: fit-content;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 0.5rem;
+  border: 2px solid #5fbbf2;
+  border-radius: 50%;
+  display: flex;
+  place-items: center;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+
+main .content h3 {
+  font-family: "Open Sans";
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+main .content h1 {
+  font-family: "Andada Pro";
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 110%;
+  margin-bottom: 2rem;
+}
+
+main .content p {
+  width: 30.5rem;
+  font-family: "Archivo";
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 150%;
+  margin-bottom: 3rem;
+}
+
+main .content .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+main .content .buttons img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+main .content .buttons button, a {
+  padding: 0.875rem 2rem;
+  border-radius: 30px;
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 1.125rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+main .content .buttons button:hover, a:hover {
+  transform: translateY(-4px);
+}
+
+main .content .buttons button:hover {
+  background: #5fbbf2;
+  color: #0b0a0a;
+}
+
+main .content .buttons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background: #5fbbf2;
+  border: 1px solid #142850;
+  color: #0b0a0a;
+  text-decoration: none;
+}
+
+main .content .buttons button {
+  color: #5fbbf2;
+  border: 1px solid #5fbbf2;
+  background-color: transparent;
+}
+
+main .img-container {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-1.25rem);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+main .img-container img:nth-of-type(1) {
+  margin-right: -1.5rem;
+}
+
+.trailer-container {
+  position: fixed;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trailer-container i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.trailer-container video {
+  position: relative;
+  max-width: 900px;
+  outline: none;
+  width: 100%;
+}
+
+.active.trailer-container {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 1756px) {
+  .container {
+    padding: 0 10vw;
+  }
+}
+
+@media screen and (max-width: 1390px) {
+  body {
+    background-position: left;
+  }
+  .container {
+    padding: 0 6vw;
+  }
+}
+
+@media screen and (max-width: 1156px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .trailer-container {
+    padding: 1rem;
+  }
+  .trailer-container i {
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+  html {
+    font-size: 10px;
+  }
+  main .img-container {
+    transform: scale(0.7);
+  }
+}
+
+@media screen and (max-width: 884px) {
+  html {
+    font-size: 13px;
+  }
+  .container {
+    gap: 0rem;
+    justify-content: center;
+  }
+  main {
+    flex-direction: column-reverse;
+  }
+  main .img-container {
+    transform: scale(0.9);
+  }
+  main .content p {
+    margin-bottom: 1rem;
+  }
+  main .content h1 {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  html {
+    font-size: 10px;
+  }
+  .container {
+    padding: 2rem;
+  }
+  header {
+    padding: 0 !important;
+  }
+  header .img-container {
+    transform: scale(0.8);
+  }
+  main {
+    justify-content: center;
+  }
+  main .img-container {
+    transform: scale(0.7);
+  }
+  header .social-container {
+    gap: 0;
+  }
+  header .social-container .icon {
+    transform: scale(0.7);
+  }
+}
+
+@media screen and (max-width: 428px) {
+  html {
+    font-size: 8px;
+  }
+  header .img-container {
+    flex-basis: 50%;
+  }
+  main .img-container img {
+    width: 100%;
+    object-fit: cover;
+  }
+  header .social-container .icon {
+    transform: scale(0.6);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  header .img-container img {
+    width: 80%;
+  }
+  main .img-container {
+    width: 30%;
+  }
+}
